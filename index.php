@@ -667,12 +667,14 @@ The center offers both theory and practical training through a blended approach 
                   <div class="group alert alert-success">
                       <?php
                         echo $respond;
+                        header('Location: '. "/index.php#contact");
                       ?>
                   </div>
-                  <?php }else if(!empty($respond) && ($respond == "You have contacted us before, Thank you!") || $respond == "message not sent"){ ?>
+                  <?php }else if(!empty($respond) && ($respond != "Message Sent")){ ?>
                     <div class="group alert alert-danger">
                       <?php
                       echo $respond;
+                      header('Location: '. "/index.php#contact");
                       ?>
                     </div>
                   <?php }else{
